@@ -40,6 +40,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(__dirname + '/public'));
 
+//root 경로로 들어오는 요청은 index 라우터로 전달
 var index = require('./routes/index');
 app.use('/', index);
 
